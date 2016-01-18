@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Garage2.Models;
 
 namespace Garage2.Controllers
 {
     public class HomeController : Controller
     {
+        VehiclesDb _db = new VehiclesDb();
+
         public ActionResult Index()
         {
             return View();
@@ -26,5 +29,13 @@ namespace Garage2.Controllers
 
             return View();
         }
+        protected override void Dispose(bool disposing)
+        {
+            if (_db != null)
+            {
+                _db.Dispose();
+            }
+            base.Dispose(disposing);
+        } 
     }
 }
