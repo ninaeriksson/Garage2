@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/modernizr")
+        <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
+
+
 <body>
+    
+    <div class="main-header"> Välkommen till vårat garage!</div>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <h1> Välkommen till vårat garage!</h1>
+            
             <div class="navbar-header">
                 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,14 +24,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Garage 2.0", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Vehicles", "Index", "Vehicles")</li>
+                    <li>@Html.ActionLink("Hem", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Om oss", "About", "Home")</li>
+                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Fordon", "Index", "Vehicles")</li>
                 </ul>
             </div>
         </div>
@@ -34,7 +40,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - copyright Nina, Mai, Per, Disa</p>
         </footer>
     </div>
 
