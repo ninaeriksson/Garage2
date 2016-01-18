@@ -11,9 +11,8 @@ namespace Garage2.Models
         public string RegNumber { get; set; }
         public string Colour { get; set; }
         public string Brand { get; set; }
-        public decimal Model { get; set; }
+        public string Model { get; set; }
         public int Wheels { get; set; }
-        public bool Parked { get; set; }
         public DateTime TimeStamp { get; set; }
 
     }
