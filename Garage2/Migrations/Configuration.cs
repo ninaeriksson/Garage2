@@ -10,6 +10,7 @@ namespace Garage2.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Garage2.Models.VehiclesDb context)
