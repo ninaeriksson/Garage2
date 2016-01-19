@@ -25,9 +25,14 @@ textarea {
 
 /* huvundmeny*/
 .main-header {
-    padding: 60px 0px 20px 0px;
+    padding: 50px 0px 50px 0px;
     font-weight:800;
     font-size: 40px;
     /*font: Arial;*/
     text-align: center;
+    color: white;
+    /*text-underline-position:below;*/
+    background-color:cornflowerblue;
+    margin-bottom:30px;
+
 }
