@@ -26,13 +26,15 @@ textarea {
 /* huvundmeny*/
 .main-header {
     padding: 50px 0px 50px 0px;
-    font-weight:800;
+    font-weight:600;
     font-size: 40px;
     /*font: Arial;*/
     text-align: center;
     color: white;
-    /*text-underline-position:below;*/
     background-color:cornflowerblue;
     margin-bottom:30px;
+    border-bottom: 1px solid black;
 
 }
+
+/*.hr1{ height:1px;border:none;border-top:1px solid #555555;}*/
