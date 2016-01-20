@@ -14,6 +14,5 @@ namespace Garage2.Models
         public string Model { get; set; }
         public int Wheels { get; set; }
         public DateTime TimeStamp { get; set; }
-
     }
 }
