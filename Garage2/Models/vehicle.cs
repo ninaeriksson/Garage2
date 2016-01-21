@@ -25,12 +25,11 @@ namespace Garage2.Models
             ErrorMessage = "Fordon med hjul färre än 3 eller mer än 8 är icke parkeringsbara!")]
         [Display(Name = "Antal hjul")]
         public int Wheels { get; set; }
-        [Display(Name = "Parkerades vid")]
-        public DateTime TimeStamp { get; set; }
+        [Display(Name = "Parkeringstid")]
+        public DateTime ParkedTime { get; set; }
     }
     public enum Brand
     {
-
         Volvo,
         Saab,
         Audi,

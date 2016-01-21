@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.Wheels)
         </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.TimeStamp)
+            @Html.DisplayNameFor(model => model.ParkedTime)
         </th>
         <th></th>
     </tr>
@@ -50,7 +50,7 @@
                 @Html.DisplayFor(modelItem => item.Wheels)
             </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.TimeStamp)
+                @Html.DisplayFor(modelItem => item.ParkedTime)
             </td>
             <td>
                 @Html.ActionLink("Editera", "Edit", new { id=item.Id }) |
