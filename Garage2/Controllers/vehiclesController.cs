@@ -46,10 +46,11 @@ namespace Garage2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,RegNumber,Colour,Brand,Model,Wheels,TimeStamp")] vehicle vehicle)
+        public ActionResult Create([Bind(Include = "Id,RegNumber,Colour,Brand,Model,Wheels")] vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
+                vehicle.ParkedTime = DateTime.Now;
                 db.vehicles.Add(vehicle);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -78,7 +79,7 @@ namespace Garage2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,RegNumber,Colour,Brand,Model,Wheels,TimeStamp")] vehicle vehicle)
+        public ActionResult Edit([Bind(Include = "Id,RegNumber,Colour,Brand,Model,Wheels")] vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
