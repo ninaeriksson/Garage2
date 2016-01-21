@@ -34,7 +34,9 @@ textarea {
     background-color:cornflowerblue;
     margin-bottom:30px;
     border-bottom: 1px solid black;
-
 }
 
+.Header > th {
+     width: 200px; 
+}
 /*.hr1{ height:1px;border:none;border-top:1px solid #555555;}*/

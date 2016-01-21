@@ -6,7 +6,6 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
-        <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 
 
@@ -33,6 +32,7 @@
                     <li>@Html.ActionLink("Om oss", "About", "Home")</li>
                     <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Parkering", "Index", "Vehicles")</li>
+                    <li>@Html.ActionLink("Sök", "Index", "FindCar")</li>
                 </ul>
             </div>
         </div>
