@@ -22,13 +22,16 @@ namespace Garage2.Controllers
             DateTime startTime = car.ParkedTime;
             DateTime endTime = DateTime.Now;
             TimeSpan diff = endTime - startTime;
+
+            var minutes = diff.TotalMinutes;
+
             double hours = diff.TotalHours;
             int hour = (int)Math.Round(hours);
-            ViewData["hour"] = hour;
-            int pricePerHour = 60;
+            ViewData["hour"] = diff.ToString(@"dd\.hh\:mm");
+            int pricePerMinute = 1;
 
 
-            int cost = Convert.ToInt32(hours * pricePerHour);
+            int cost = (int)(pricePerMinute * minutes);
             ViewData["cost"] = cost;
             if (car == null)
             {
