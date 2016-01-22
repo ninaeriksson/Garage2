@@ -80,10 +80,11 @@ namespace Garage2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,RegNumber,Colour,Brand,Model,Wheels")] vehicle vehicle)
+        public ActionResult Edit([Bind(Include = "Id,RegNumber,Colour,Brand,Model,Wheels,ParkedTime")] vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
+                
                 db.Entry(vehicle).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
