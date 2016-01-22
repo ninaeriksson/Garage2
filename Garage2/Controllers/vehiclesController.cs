@@ -28,6 +28,7 @@ namespace Garage2.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             vehicle vehicle = db.vehicles.Find(id);
+            ViewData["id"] = id;
             if (vehicle == null)
             {
                 return HttpNotFound();
@@ -113,7 +114,8 @@ namespace Garage2.Controllers
             vehicle vehicle = db.vehicles.Find(id);
             db.vehicles.Remove(vehicle);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            TempData["Vehicle"] = vehicle;
+            return RedirectToAction("../Receipt/Compute");
         }
 
         protected override void Dispose(bool disposing)

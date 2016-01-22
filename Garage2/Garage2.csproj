@@ -119,6 +119,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FindCarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReceiptController.cs" />
     <Compile Include="Controllers\vehiclesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -210,6 +211,7 @@
     <Content Include="Views\vehicles\Edit.cshtml" />
     <Content Include="Views\vehicles\Index.cshtml" />
     <Content Include="Views\FindCar\Index.cshtml" />
+    <Content Include="Views\Receipt\Compute.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

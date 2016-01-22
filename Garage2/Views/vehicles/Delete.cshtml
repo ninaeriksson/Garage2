@@ -3,7 +3,9 @@
 @{
     ViewBag.Title = "Delete";
 }
-
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 <h2>Hämta ut fordon</h2>
 
 <h3>Är du säker på att detta är din bil?</h3>
@@ -52,21 +54,32 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TimeStamp)
+            @Html.DisplayNameFor(model => model.ParkedTime)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TimeStamp)
+            @Html.DisplayFor(model => model.ParkedTime)
         </dd>
 
     </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+    @*@using (Html.BeginForm()) {*@
+       
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Hämta ut" class="btn btn-default" /> |
-            @Html.ActionLink("Tillbaka till listan", "Index")
-        </div>
-    }
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Hämta ut" class="btn btn-default" />  |
+
+        <!-- Field for your PRN Value -->
+      
+        <!-- Hidden field to store your ID (so that it will posted to your Edit Action) -->
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.ParkedTime)
+        @*//<input type="submit" value="Hämta ut" class="btn btn-default"  />
+
+            //@Html.ActionLink("Kvitto", "Compute", "Receipt", new { Id = Model.Id }, null)*@
+        @Html.ActionLink("Tillbaka till listan", "Index")
+    </div>
+    
 </div>
+}

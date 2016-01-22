@@ -27,6 +27,7 @@ namespace Garage2.Models
         public int Wheels { get; set; }
         [Display(Name = "Parkeringstid")]
         public DateTime ParkedTime { get; set; }
+       
     }
     public enum Brand
     {
